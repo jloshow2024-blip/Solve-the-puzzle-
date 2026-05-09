@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  dustnode:
+    image: dustnet/node:latest
+    container_name: dustnet_node
+    ports:
+      - "26656:26656"
+      - "26657:26657"
+    volumes:
+      - ./data:/root/.dustnd
+    command: ["start"]
